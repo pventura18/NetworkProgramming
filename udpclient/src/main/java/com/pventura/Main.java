@@ -31,6 +31,9 @@ public class Main {
                 System.out.println("Text received is: " + new String(buffer2, 0, packet.getLength()));
             } while(!echoString.equals("exit"));
 
+            datagramSocket.close();
+            scanner.close();
+
         } catch(SocketTimeoutException e){
             System.out.println("The socket timed out");
         } catch(IOException e){
