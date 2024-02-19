@@ -30,10 +30,12 @@ public class Main {
                     System.out.println(response);
                 }
             } while(!echoString.equals("exit"));
+
+            scanner.close();
         } catch (SocketTimeoutException e) {
             System.out.println("The socket timed out");
         } catch (IOException e) {
             System.out.println("Client exception " + e.getMessage());
-        }
+        } 
     }
 }
